@@ -13,32 +13,7 @@ export function ProtectedRoute({ children, allowedRoles, redirectTo = "/auth" }:
   const { user, role, loading } = useAuth();
   const location = useLocation();
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-primary" />
-          <p className="text-muted-foreground">Loading...</p>
-        </div>
-      </div>
-    );
-  }
 
-  // 1. If not logged in, send to login page
-  if (!user) {
-    return <Navigate to={redirectTo} state={{ from: location }} replace />;
-  }
-
-  // 2. If logged in but role doesn't match the allowed roles
-  if (allowedRoles && role && !allowedRoles.includes(role)) {
-    // Optional: If an Admin tries to access a normal route, you might want to redirect them 
-    // to the admin dashboard instead of the generic unauthorized page.
-    if (role === AppRole.ADMIN) {
-       return <Navigate to="/admin" replace />;
-    }
-    
-    return <Navigate to="/unauthorized" replace />;
-  }
 
   return <>{children}</>;
 }

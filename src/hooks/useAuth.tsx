@@ -69,6 +69,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         try {
           setSession(session);
           setUser(session?.user ?? null);
+          //setUser({new_email:"",is_sso_user:"",app_metadata:{},aud:"",created_at:"",confirmed_at:"",email:"",id:"",identities:[],last_sign_in_at:"",role:"",updated_at:"",user_metadata:{}} as User);
 
           if (session?.user) {
             await fetchUserRole(session.user.id);

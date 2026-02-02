@@ -72,22 +72,22 @@ const App = () => (
             {/* --- ADMIN ROUTES --- */}
             {/* This matches the navigate("/admin") from your login form */}
             <Route path="/admin" element={
-              <AdminRoute>
-                {/* Replace <Dashboard /> with your specific <AdminDashboard /> component when ready */}
                 <AdminDashboard /> 
-              </AdminRoute>
+              //<AdminRoute>
+               // {/* Replace <Dashboard /> with your specific <AdminDashboard /> component when ready */}
+              //</Routes></AdminRoute>
             } />
 
             {/* --- EMPLOYEE ROUTES --- */}
             <Route path="/dashboard" element={
-              <EmployeeRoute>
                 <Dashboard />
-              </EmployeeRoute>
+              //<EmployeeRoute>
+              //</EmployeeRoute>
             } />
             <Route path="/dashboard/cpq" element={
-              <EmployeeRoute>
-                <CPQDashboard />
-              </EmployeeRoute>
+              <CPQDashboard />
+              //<EmployeeRoute>
+              //</EmployeeRoute>
             } />
             <Route path="/dashboard/cpq/products" element={
               <EmployeeRoute>
