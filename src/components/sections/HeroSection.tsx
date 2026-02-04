@@ -14,12 +14,14 @@ import clmImage from "@/assets/clm-lifecycle.png";
 import crmImage from "@/assets/crm-diagram.png";
 import automationImage from "@/assets/automation-visual.png";
 import esignatureImage from "@/assets/esignature-workflow.png";
+import erpImage from "@/assets/ERP.png"
 
 const serviceImages = [
   { src: dashboardMockup, alt: "Unified dashboard showing CPQ, CLM, and CRM modules", label: "Unified Platform" },
   { src: cpqImage, alt: "CPQ capability map showing quote configuration", label: "CPQ" },
   { src: clmImage, alt: "CLM lifecycle management workflow", label: "CLM" },
   { src: crmImage, alt: "CRM customer relationship diagram", label: "CRM" },
+   { src: erpImage, alt: "ERP enterprise resource planning diagram", label: "ERP" },
   { src: automationImage, alt: "Document automation visual workflow", label: "Automation" },
   { src: esignatureImage, alt: "E-Signature workflow illustration", label: "E-Signature" },
 ];
@@ -73,7 +75,7 @@ export function HeroSection() {
                 {/* Main Heading - Clamped font sizes */}
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground tracking-tight leading-tight mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
                 One Unified Platform for{" "}
-                <span className="text-gradient block mt-1">CPQ, CLM & CRM</span>
+                <span className="text-gradient block mt-1">CPQ, CLM, ERP & CRM</span>
                 </h1>
 
                 {/* Subheading - Controlled width and size */}
